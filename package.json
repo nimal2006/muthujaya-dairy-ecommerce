@@ -1,0 +1,27 @@
+{
+  "name": "muthujaya-dairy-farm",
+  "version": "1.0.0",
+  "description": "Smart Milk Delivery, Billing & Business Management System",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm run dev",
+    "client": "cd frontend && npm run dev",
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "build": "cd frontend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "dairy",
+    "milk-delivery",
+    "mern-stack"
+  ],
+  "author": "Muthujaya Dairy Farm",
+  "license": "MIT"
+}
