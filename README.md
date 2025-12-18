@@ -244,7 +244,7 @@ MIT License - feel free to use this project for learning or commercial purposes.
 
 ## 👨‍💻 Author
 
-**Nimal** - [GitHub](https://github.com/nimal2006)
+**Nimal** - [GitHub](https://github.com/nimal2006) | [Repository](https://github.com/nimal2006/muthujaya-dairy-ecommerce)
 
 ## 🤝 Contributing
 
