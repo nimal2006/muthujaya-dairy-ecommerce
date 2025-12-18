@@ -3,6 +3,19 @@ import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "react-vendor": ["react", "react-dom", "react-router-dom"],
+          motion: ["framer-motion"],
+          icons: ["react-icons/fi"],
+          state: ["zustand"],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
+  },
   plugins: [
     react(),
     VitePWA({
@@ -85,17 +98,6 @@ export default defineConfig({
       "/api": {
         target: "http://localhost:5000",
         changeOrigin: true,
-      },
-    },
-  },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ["react", "react-dom", "react-router-dom"],
-          animations: ["framer-motion"],
-          state: ["zustand"],
-        },
       },
     },
   },

@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -10,7 +11,7 @@ import {
 } from "react-icons/fi";
 import { useCartStore } from "../store/cartStore";
 
-const CartDrawer = () => {
+const CartDrawer = memo(() => {
   const {
     items,
     isCartOpen,
@@ -161,10 +162,12 @@ const CartDrawer = () => {
       )}
     </AnimatePresence>
   );
-};
+});
+
+CartDrawer.displayName = "CartDrawer";
 
 // Floating Cart Button Component
-export const FloatingCartButton = () => {
+const FloatingCartButton = memo(() => {
   const { openCart, getCartCount } = useCartStore();
   const count = getCartCount();
 
@@ -186,7 +189,9 @@ export const FloatingCartButton = () => {
       </span>
     </motion.button>
   );
-};
+});
 
-export { CartDrawer };
+FloatingCartButton.displayName = "FloatingCartButton";
+
+export { CartDrawer, FloatingCartButton };
 export default CartDrawer;

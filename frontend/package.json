@@ -18,6 +18,11 @@
     "mobile:build": "npm run build && npx cap sync"
   },
   "dependencies": {
+    "@capacitor/android": "^8.0.0",
+    "@capacitor/app": "^8.0.0",
+    "@capacitor/core": "^8.0.0",
+    "@capacitor/splash-screen": "^8.0.0",
+    "@capacitor/status-bar": "^8.0.0",
     "@googlemaps/js-api-loader": "^1.16.2",
     "axios": "^1.6.2",
     "date-fns": "^2.30.0",
@@ -31,13 +36,14 @@
     "zustand": "^4.4.7"
   },
   "devDependencies": {
-    "@capacitor/cli": "^6.0.0",
+    "@capacitor/cli": "^6.2.1",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0",
+    "typescript": "^5.9.3",
     "vite": "^5.0.8",
     "vite-plugin-pwa": "^0.17.5"
   },

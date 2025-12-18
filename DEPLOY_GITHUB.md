@@ -5,6 +5,7 @@
 ### ✅ Method 1: Vercel (Recommended - Fastest)
 
 **1. Push to GitHub:**
+
 ```bash
 git add .
 git commit -m "Ready for deployment"
@@ -12,6 +13,7 @@ git push origin main
 ```
 
 **2. Deploy on Vercel:**
+
 - Go to https://vercel.com/new
 - Click "Import Git Repository"
 - Select your `E-COMMERECE` repo
@@ -27,6 +29,7 @@ git push origin main
 ### ✅ Method 2: Netlify
 
 **1. Push to GitHub:**
+
 ```bash
 git add .
 git commit -m "Ready for deployment"
@@ -34,6 +37,7 @@ git push origin main
 ```
 
 **2. Deploy on Netlify:**
+
 - Go to https://app.netlify.com/start
 - Click "Import from Git" → Select GitHub
 - Choose your `E-COMMERECE` repo
@@ -49,6 +53,7 @@ git push origin main
 ### ✅ Method 3: GitHub Actions + Any Host
 
 Already set up! Just push:
+
 ```bash
 git add .
 git commit -m "Deploy app"
@@ -56,6 +61,7 @@ git push origin main
 ```
 
 GitHub Actions will:
+
 - ✓ Build your app automatically
 - ✓ Run tests
 - ✓ Create deployment artifacts
@@ -66,18 +72,21 @@ GitHub Actions will:
 ## 📋 Pre-Deployment Checklist
 
 ### 1. Check Git Status
+
 ```bash
 git status
 # Make sure you're on main/master branch
 ```
 
 ### 2. Commit All Changes
+
 ```bash
 git add .
 git commit -m "🚀 Production ready - PWA + E-commerce features"
 ```
 
 ### 3. Push to GitHub
+
 ```bash
 # If repo exists:
 git push origin main
@@ -121,6 +130,7 @@ git push -u origin main
 7. Click Deploy
 
 ### Get Your Backend URL
+
 After deployment, copy the URL (e.g., `https://your-app.onrender.com`)
 
 ---
@@ -130,16 +140,18 @@ After deployment, copy the URL (e.g., `https://your-app.onrender.com`)
 **Update API URL in frontend:**
 
 Edit `frontend/src/utils/api.js`:
+
 ```javascript
 const api = axios.create({
-  baseURL: 'https://YOUR_BACKEND_URL.onrender.com/api', // Update this!
+  baseURL: "https://YOUR_BACKEND_URL.onrender.com/api", // Update this!
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
 });
 ```
 
 **Then redeploy:**
+
 ```bash
 git add .
 git commit -m "Update API URL"
@@ -152,12 +164,14 @@ git push origin main
 ## 🎯 Vercel Deployment (Detailed Steps)
 
 ### Step 1: Login/Signup
+
 ```bash
 npm install -g vercel
 vercel login
 ```
 
 ### Step 2: Deploy from GitHub
+
 1. Visit https://vercel.com/new
 2. Import your GitHub repo
 3. Configure:
@@ -172,9 +186,11 @@ vercel login
 5. Click **Deploy**
 
 ### Step 3: Get Your URL
+
 ✅ Your app is live at: `https://your-app.vercel.app`
 
 ### Step 4: Custom Domain (Optional)
+
 - Go to Project Settings → Domains
 - Add your domain: `muthujaya-dairy.com`
 - Update DNS records
@@ -185,9 +201,11 @@ vercel login
 ## 🎯 Netlify Deployment (Detailed Steps)
 
 ### Step 1: Create netlify.toml (Already done!)
+
 Located at: `frontend/netlify.toml`
 
 ### Step 2: Deploy
+
 1. Visit https://app.netlify.com/
 2. Click "Add new site" → "Import an existing project"
 3. Choose GitHub → Authorize → Select repo
@@ -199,6 +217,7 @@ Located at: `frontend/netlify.toml`
 5. Click **Deploy site**
 
 ### Step 3: Get Your URL
+
 ✅ Your app is live at: `https://your-app.netlify.app`
 
 ---
@@ -208,6 +227,7 @@ Located at: `frontend/netlify.toml`
 Once connected to Vercel or Netlify:
 
 **Every time you push to GitHub:**
+
 ```bash
 git add .
 git commit -m "Update feature"
@@ -215,6 +235,7 @@ git push origin main
 ```
 
 **Happens automatically:**
+
 1. ✓ GitHub triggers webhook
 2. ✓ Platform pulls latest code
 3. ✓ Runs `npm install`
@@ -231,7 +252,7 @@ git push origin main
 ✅ **Order Tracking** - User dashboard  
 ✅ **Offline Support** - Service worker  
 ✅ **Auto Updates** - Users get updates instantly  
-✅ **Fast CDN** - Loads globally in milliseconds  
+✅ **Fast CDN** - Loads globally in milliseconds
 
 ---
 
@@ -241,11 +262,13 @@ git push origin main
 
 **Check Node version:**
 Create `frontend/.nvmrc`:
+
 ```
 18
 ```
 
 **Or add to package.json:**
+
 ```json
 "engines": {
   "node": ">=18.0.0"
@@ -268,6 +291,7 @@ Already fixed in `netlify.toml` and `vercel.json`!
 ## 📊 Deployment Status
 
 After deployment, check:
+
 - ✅ Frontend URL works
 - ✅ Shop page loads products
 - ✅ Cart works
@@ -280,6 +304,7 @@ After deployment, check:
 ## 🎉 You're Done!
 
 **Push to GitHub:**
+
 ```bash
 git add .
 git commit -m "🚀 Deploy Muthujaya Dairy E-commerce App"
@@ -287,6 +312,7 @@ git push origin main
 ```
 
 **Then choose:**
+
 - **Vercel:** https://vercel.com/new (30 seconds)
 - **Netlify:** https://app.netlify.com/start (30 seconds)
 

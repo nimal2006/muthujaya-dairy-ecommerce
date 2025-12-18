@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* GPU acceleration for smooth animations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+
+  [class*="motion-"] {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+}
+
+/* Optimize images */
+img {
+  content-visibility: auto;
+}
+
 /* ═══════════════════════════════════════════════════════════════
    MUTHUJAYA DAIRY FARM - LUXURY PREMIUM STYLES
    Premium, Cinematic, Apple-level Polish
