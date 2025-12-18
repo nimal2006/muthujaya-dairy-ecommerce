@@ -9,12 +9,14 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "https://YOUR_BACKEND_URL/api/$1"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/index.html"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "http://localhost:5000/api/:path*"
     }
   ]
 }

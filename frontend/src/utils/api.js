@@ -1,8 +1,21 @@
 import axios from "axios";
 import toast from "react-hot-toast";
 
+// Detect environment and use appropriate API URL
+const getApiUrl = () => {
+  // Check if we're in production (Vercel)
+  if (window.location.hostname.includes("vercel.app")) {
+    // Use mock/demo mode for now - backend to be deployed separately
+    return window.location.origin + "/api";
+  }
+  // Development - use local backend
+  return "http://localhost:5000/api";
+};
+
+const API_URL = getApiUrl();
+
 const api = axios.create({
-  baseURL: "/api",
+  baseURL: API_URL,
   headers: {
     "Content-Type": "application/json",
   },
